@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="slide.css">
+<style>
+	div{
+		margin-left: 30px;
+	}
+	.tab-title li{
+		display: block;
+		float: left;
+		width: 138px;
+		height: 40px;
+		background: url(1.png?1) no-repeat;
+		margin-left: -30px;
+		position: relative;
+		text-align: center;
+		line-height: 40px;
+		text-decoration: none;
+	}
+	.tab-title li.tab-title-hover{
+		background: url(1.png?1) no-repeat 0 -40px;
+		z-index: 6;
+	}
+	.z1{
+		z-index: 5;
+	}
+	.z2{
+		z-index: 4;
+	}
+	.z3{
+		z-index: 3;
+	}
+	.z4{
+		z-index: 2;
+	}
+	.z5{
+		z-index: 1;
+	}
+	.box{
+		display: block;
+		width: 30px;
+		height: 30px;
+		background:red;
+		border-radius: 50%;
+		position: absolute;
+		left: 10px;
+	}
+</style>
+</head>
+<body>
+<div>
+<button id="sub">确定</button>
+<div class="box" id="box"></div>
+</div>
+<!-- <script type="text/javascript" src="http://static1.bubugao.com/js/mootools1.4.5.js"></script>	-->
+<script type="text/javascript" src="jquery.js"></script>	
+<script type="text/javascript">
+	$(function(){
+		var top = 100;
+		var m = 100;
+		var time = setInterval(function(){
+			top = top*0.1
+			$('#box').animate({'top':top});
+		},30);
+		
+	})
+</script>
+</body>
+</html>
